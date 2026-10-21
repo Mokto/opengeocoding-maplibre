@@ -1,0 +1,49 @@
+{
+  "name": "@opengeocoding/maplibre-gl-geocoder",
+  "version": "0.1.0",
+  "description": "OpenGeocoding address search and autocomplete for MapLibre GL Geocoder (@maplibre/maplibre-gl-geocoder).",
+  "keywords": [
+    "maplibre",
+    "maplibre-gl",
+    "maplibre-gl-geocoder",
+    "geocoder",
+    "geocoding",
+    "autocomplete",
+    "address",
+    "search"
+  ],
+  "homepage": "https://opengeocoding.com/docs/maplibre",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mokto/opengeocoding-maplibre.git"
+  },
+  "bugs": "https://github.com/Mokto/opengeocoding-maplibre/issues",
+  "license": "MIT",
+  "author": "OpenGeocoding <support@opengeocoding.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "peerDependencies": {
+    "@maplibre/maplibre-gl-geocoder": ">=1.5.0"
+  },
+  "devDependencies": {
+    "@maplibre/maplibre-gl-geocoder": "1.9.4",
+    "maplibre-gl": "6.15.0",
+    "typescript": "7.0.2"
+  }
+}
